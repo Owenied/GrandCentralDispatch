@@ -37,18 +37,7 @@ class ViewController: UITableViewController {
         }
         showError()
     }
-    
-    func parse(json: JSON) {
-        for result in json["results"].arrayValue {
-            let title = result["title"].stringValue
-            let body = result["body"].stringValue
-            let sigs = result["signatureCount"].stringValue
-            let obj = ["title": title, "body": body, "sigs": sigs]
-            petitions.append(obj)
-        }
-        tableView.reloadData()
-    }
-    
+
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
         return petitions.count
@@ -70,10 +59,25 @@ class ViewController: UITableViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func parse(json: JSON) {
+        for result in json["results"].arrayValue {
+            let title = result["title"].stringValue
+            let body = result["body"].stringValue
+            let sigs = result["signatureCount"].stringValue
+            let obj = ["title": title, "body": body, "sigs": sigs]
+            petitions.append(obj)
+        }
+        DispatchQueue.main.async { [unowned self] in
+            self.tableView.reloadData()
+        }
+    }
+    
     func showError() {
-        let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
+        DispatchQueue.main.async { [unowned self] in
+            let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(ac, animated: true)
+        }
     }
     
     override func didReceiveMemoryWarning() {
