@@ -12,6 +12,8 @@
 		49F0FAFE1EC4D56800823D4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F0FAFC1EC4D56800823D4A /* Main.storyboard */; };
 		49F0FB001EC4D56800823D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F0FAFF1EC4D56800823D4A /* Assets.xcassets */; };
 		49F0FB031EC4D56800823D4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F0FB011EC4D56800823D4A /* LaunchScreen.storyboard */; };
+		49F0FB0B1EC4DA4900823D4A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F0FB0A1EC4DA4900823D4A /* SwiftyJSON.swift */; };
+		49F0FB0D1EC4E13D00823D4A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F0FB0C1EC4E13D00823D4A /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		49F0FAFF1EC4D56800823D4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F0FB021EC4D56800823D4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49F0FB041EC4D56800823D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F0FB0A1EC4DA4900823D4A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		49F0FB0C1EC4E13D00823D4A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				49F0FAF81EC4D56800823D4A /* AppDelegate.swift */,
 				49F0FAFA1EC4D56800823D4A /* ViewController.swift */,
+				49F0FB0C1EC4E13D00823D4A /* DetailViewController.swift */,
 				49F0FAFC1EC4D56800823D4A /* Main.storyboard */,
 				49F0FAFF1EC4D56800823D4A /* Assets.xcassets */,
 				49F0FB011EC4D56800823D4A /* LaunchScreen.storyboard */,
 				49F0FB041EC4D56800823D4A /* Info.plist */,
+				49F0FB0A1EC4DA4900823D4A /* SwiftyJSON.swift */,
 			);
 			path = GrandCentralDispatch;
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F0FB0B1EC4DA4900823D4A /* SwiftyJSON.swift in Sources */,
 				49F0FAFB1EC4D56800823D4A /* ViewController.swift in Sources */,
 				49F0FAF91EC4D56800823D4A /* AppDelegate.swift in Sources */,
+				49F0FB0D1EC4E13D00823D4A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
